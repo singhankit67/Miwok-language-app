@@ -5,3 +5,5 @@ Created an application that gives the <b>miwok translation for an english word b
 ## Snapshots
 
 ### Splashscreen
+
+<img src="Images/Screenshot_20200505-135329.jpg" width=200 height=400>
