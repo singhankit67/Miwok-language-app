@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+<ListView
+
+          android:id="@+id/list1"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#000"
+        android:divider="#333333"
+        android:dividerHeight="0.02dp"
+        android:layout_marginRight="10sp"
+        android:layout_marginEnd="10sp"
+
+
+
+/>
+<android.support.design.widget.BottomNavigationView
+android:layout_width = "match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/btm_nav"
+app:itemTextColor="@drawable/selector"
+app:itemIconTint="@drawable/selector"
+
+android:layout_alignParentBottom="true"
+android:background="#333333"
+app:menu="@menu/bottom_nav"
+        />
+<FrameLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:id="@+id/frameLayout"
+android:layout_above="@+id/btm_nav">
+</FrameLayout>
+</RelativeLayout>

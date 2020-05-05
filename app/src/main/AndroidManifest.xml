@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.example.miwokapp">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="Miwok Translator"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".Splash"
+                android:label="Miwok App"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ColorsActivity"
+                android:label="Colors List"
+                android:theme="@style/AppTheme"></activity>
+        <activity
+                android:name=".PhrasesActivity"
+                android:label="Phrases List"
+                android:theme="@style/AppTheme"></activity>
+        <activity
+                android:name=".FamilyActivity"
+                android:label="Family List"
+                android:theme="@style/AppTheme"></activity>
+        <activity
+                android:name=".NumbersActivity"
+                android:label="Numbers List"
+                android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+                android:name=".MainActivity"
+                android:label="Miwok App"
+                android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>
