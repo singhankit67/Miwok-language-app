@@ -1,0 +1,438 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Profile_F"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:elevation="7dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="none"
+        android:background="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/shareBtn"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingEnd="@dimen/padding_10"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="12dp"
+                app:tint="@color/Text"
+                android:src="@drawable/ic_add_person"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/lightGrayColor"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/usernameTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/username"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightGrayColor"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_verified_badge"
+                    android:id="@+id/verificationBadge"
+                    app:tint="@color/colorPrimary"
+                    android:layout_alignRight="@id/usernameTop"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="3dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/settingsBtn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:paddingStart="@dimen/padding_10"
+                app:tint="@color/grayColor"
+                android:paddingEnd="@dimen/padding_10"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/shareBtnRight"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:tint="@color/Text"
+                android:src="@drawable/ic_lyte_share"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="48dp"
+        android:background="@color/colorDark"
+        >
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="true"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/middleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:visibility="invisible"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover" />
+
+                <LinearLayout
+                    android:id="@+id/statsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/padding_10"
+                        android:layout_weight=".9"
+                        android:src="@drawable/default_pic"
+                        app:civ_border_color="@color/Secondary"
+                        app:civ_border_width="3dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="fill_vertical"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="2.1"
+                        android:gravity="fill_horizontal|fill_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/videosCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/Text"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="2dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/videos"
+                                    android:textColor="@color/Text60"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/fans_layout"
+                                android:layout_weight="1"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/fan_count_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="8dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/Text"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="2dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/followers"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/Text60"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/following_layout"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/followingTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="8dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="8dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/_0"
+                                    android:textColor="@color/Text"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="2dp"
+                                    android:paddingTop="0dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/following"
+                                    android:textColor="@color/Text60"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            >
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/profileBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.9"
+                                android:textColor="@color/Text88"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="4dp"
+                                android:letterSpacing="0"
+                                android:text="@string/edit_profile"
+                                android:textAllCaps="false"
+                                app:backgroundTint="@color/Secondary"
+                                app:cornerRadius="30dp" />
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_centerHorizontal="true"
+                                android:visibility="gone"
+                                android:id="@+id/instaIdBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:borderWidth="0dp"
+                                android:layout_gravity="center_horizontal|center"
+                                app:elevation="0dp"
+                                app:fabCustomSize="36dp"
+                                android:backgroundTint="@color/Secondary"
+                                app:srcCompat="@drawable/ic_carbon_logo_instagram"
+
+                                app:tint="@color/Text88"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/fullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="2dp"
+                    android:text=""
+                    android:textSize="19sp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Text" />
+
+                <TextView
+                    android:visibility="visible"
+                    android:id="@+id/bio"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15sp"
+                    android:text=""
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:textColor="@color/gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/transparent_black" />
+
+            </LinearLayout>
+<!--
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@id/tabs"
+                android:background="@color/grayColor" />
+-->
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            app:tabBackground="@color/colorDark"
+            android:background="@color/colorDark"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/grayColor"
+            app:tabMode="fixed"
+            app:tabIndicatorFullWidth="false"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabSelectedTextColor="@color/grayColor"
+            app:tabTextColor="@color/dimGray" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent_black"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/pager"
+        app:layout_anchorGravity="top|center" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDark"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:lottie_rawRes="@raw/progressloader"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_colorFilter="#fff"
+        android:layout_marginTop="290dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/loaderanimationforprofilefragment"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+

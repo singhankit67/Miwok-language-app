@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/select_music_relativelayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Dark"
+    android:elevation="3dp"
+    android:paddingHorizontal="8dp"
+    android:layout_marginVertical="@dimen/dp10"
+    >
+
+    <RelativeLayout
+        android:id="@+id/select_music_relativelayout_music_details"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/select_music_relativelayout_progress_indicator"
+            android:layout_width="64dp"
+            android:layout_height="64dp">
+
+            <ImageView
+                android:id="@+id/musicPoster"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/select_music_image_progress_indicator"
+                android:layout_width="30dp"
+                android:visibility="gone"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_action_musicplay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/select_music_relativelayout_progress_indicator">
+
+            <TextView
+                android:id="@+id/select_music_list_textview_title"
+                android:layout_width="wrap_content"
+                android:padding="2dp"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginEnd="64dp"
+                android:textColor="@color/Text"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/select_music_list_textview_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_music_list_textview_title"
+                android:text=""
+                android:textSize="12dp"
+                android:padding="2dp"
+                android:textColor="@color/Text88"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/select_music_button_select"
+            android:layout_width="36dp"
+            android:layout_height="38dp"
+            android:layout_margin="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_baseline_check_24"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:backgroundTint="@color/Primary"
+            android:textSize="18dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

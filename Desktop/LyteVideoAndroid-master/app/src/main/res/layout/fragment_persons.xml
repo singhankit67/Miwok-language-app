@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.reelvideos.app.SettingsActivity">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_marginStart="@dimen/padding_10"
+                android:id="@+id/backBtn"
+                app:tint="@color/grayColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/padding_10"
+                app:layout_constraintStart_toEndOf="@id/backBtn"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        app:tabBackground="@color/Dark"
+        android:background="@color/Dark"
+        app:tabSelectedTextColor="@color/Text"
+        app:tabTextColor="@color/Text60"
+        app:tabIndicatorColor="@color/Text"
+        android:paddingBottom="0dp"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tab_layout"
+        android:id="@+id/pager"
+        android:background="@color/colorDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

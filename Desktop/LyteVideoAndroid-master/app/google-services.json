@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "220668477111",
+    "firebase_url": "https://lyte-video.firebaseio.com",
+    "project_id": "lyte-video",
+    "storage_bucket": "lyte-video.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220668477111:android:3bea9e8ee49c4554b3d732",
+        "android_client_info": {
+          "package_name": "com.reelvideos.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220668477111-glah1ok0p148qatdvt5gehun9njal92m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reelvideos.app",
+            "certificate_hash": "dbc0c53b238adb87d7ec9d408a2ee8d63bbc4b3e"
+          }
+        },
+        {
+          "client_id": "220668477111-m82tn33mi4do938qrftnqv6a1a789pj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcF6Ekxdnfxo7jKvn2GoDetRO7zBV3L_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220668477111-m82tn33mi4do938qrftnqv6a1a789pj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

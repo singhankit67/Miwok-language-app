@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.reelvideos.app.persons.FollowersFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dataRecycler"/>
+
+    <LinearLayout
+        android:id="@+id/progressLayout"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:id="@+id/progressText"
+            android:textSize="16sp"
+            android:textColor="@color/grayColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_wait"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="@color/grayColor"
+        android:id="@+id/noFollow"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/no_followers_yet"/>
+
+</RelativeLayout>

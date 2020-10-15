@@ -1,0 +1,74 @@
+[
+  {
+    "name": "L1",
+    "thumbnail": "baixue/thumbnail.jpg",
+    "config": "baixue",
+    "lut": "baixue/snow/snow.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/baixue.zip"
+  },
+  {
+    "name": "L2",
+    "thumbnail": "chahui/thumbnail.jpg",
+    "config": "chahui",
+    "lut": "chahui/lut_124/lut_124.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/chahui.zip"
+  },
+  {
+    "name": "L3",
+    "thumbnail": "chulian/thumbnail.jpg",
+    "config": "chulian",
+    "lut": "chulian/lut_118/lut_118.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/chulian.zip"
+  },
+  {
+    "name": "L4",
+    "thumbnail": "danse/thumbnail.jpg",
+    "config": "danse",
+    "lut": "danse/lut_114/lut_114.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/danse.zip"
+  },
+  {
+    "name": "L5",
+    "thumbnail": "fanchase/thumbnail.jpg",
+    "config": "fanchase",
+    "lut": "fanchase/lut_112/lut_112.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/fanchase.zip"
+  },
+  {
+    "name": "L6",
+    "thumbnail": "haitang/thumbnail.jpg",
+    "config": "haitang",
+    "lut": "haitang/lut_146/lut_146.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/haitang.zip"
+  },
+  {
+    "name": "L7",
+    "thumbnail": "hupo/thumbnail.jpg",
+    "config": "hupo",
+    "lut": "hupo/lut_147/lut_147.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/hupo.zip"
+  },
+  {
+    "name": "L8",
+    "thumbnail": "suannai/thumbnail.jpg",
+    "config": "suannai",
+    "lut": "suannai/lut_140/lut_140.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/suannai.zip"
+  },
+  {
+    "name": "L9",
+    "thumbnail": "zhongxia/thumbnail.jpg",
+    "config": "zhongxia",
+    "lut": "zhongxia/lut_148/lut_148.png",
+    "updateTime": 1592479912,
+    "downloadUrl": "https://videofactory.oss-cn-shanghai.aliyuncs.com/filter/zhongxia.zip"
+  }
+]

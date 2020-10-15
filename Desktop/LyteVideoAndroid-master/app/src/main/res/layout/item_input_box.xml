@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/keyboard"
+    android:background="#000000"
+    android:padding="15dp"
+    android:splitMotionEvents="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/white_transparent"
+        android:text="😂 ❤ 😍 👌 😘 😋 😥 😴 😛 🙈 🤟 👏 🎈 🎆 🎊"
+        android:textSize="25dp"/>
+
+    <RelativeLayout
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/textContent"
+            android:layout_toLeftOf="@+id/reply"
+            android:background="@drawable/corner_radius"
+            android:maxLines="3"
+            android:hint="Comment Here"
+            android:layout_centerVertical="true"
+            android:textColorHint="@color/white_transparent"
+            android:textColor="@color/white_transparent" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/play_icon"
+            android:id="@+id/reply"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/send"/>
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_carbon_send_filled_new"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

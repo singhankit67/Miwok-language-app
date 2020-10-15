@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "Space bear",
+    "color": "#cc23bdb1",
+    "source": "https://helotok.app/assets/spaceBear.png",
+    "effect": "effect/spaceBear"
+  },
+  {
+    "id": 1,
+    "name": "Rose eye makeup",
+    "color": "#cc23bdb1",
+    "source": "https://helotok.app/assets/icone%20asset%203.jpg",
+    "effect": "effect/roseEyeMakeup"
+  },
+  {
+    "id": 2,
+    "name": "princess",
+    "color": "#cce77e86",
+    "source": "https://helotok.app/assets/icone%20asset%204.jpg",
+    "effect": "effect/princess"
+  },
+  {
+    "id": 3,
+    "name": "Sticker makeup",
+    "color": "#cce77e86",
+    "source": "https://helotok.app/assets/icone%20asset%205.png",
+    "effect": "effect/stickerMarkup"
+  },
+  {
+    "id": 4,
+    "name": "Falling piggy",
+    "color": "#cce77e86",
+    "source": "https://helotok.app/assets/pngfind.com-waddles-png-6876578.png",
+    "effect": "effect/fallPig"
+  },
+  {
+    "id": 5,
+    "name": "Cat head",
+    "color": "#cce77e86",
+    "source": "https://helotok.app/assets/icon%20asset%20(1).png",
+    "effect": "effect/cat"
+  }
+]

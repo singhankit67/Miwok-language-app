@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCard"
+    android:layout_width="123dp"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    android:elevation="0dp"
+    android:focusable="true"
+    android:gravity="center"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@color/black"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/thumb_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/darkGray"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_placeholder" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:alpha=".9"-->
+<!--            android:src="@drawable/play_icon" />-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/black_gradient"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp"
+            >
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:gravity="center">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="16dp"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/ic_baseline_favorite_24" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/likesCount"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:shadowColor="@color/darkGray"-->
+<!--                    android:shadowDx="2"-->
+<!--                    android:shadowDy="2"-->
+<!--                    android:shadowRadius="3"-->
+<!--                    android:text="2"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14sp" />-->
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".7"
+                android:layout_marginBottom="@dimen/dp3"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lyte_play" />
+
+                <TextView
+                    android:id="@+id/ViewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

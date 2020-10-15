@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorDark"
+    android:id="@+id/Search_Fragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarSearchPage"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="-24dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/goBackToExplore"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/searchIT"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/corner_radius"
+                    android:cursorVisible="true"
+                    android:enabled="true"
+                    android:focusedByDefault="true"
+                    android:focusable="true"
+                    android:bufferType="editable"
+                    android:inputType="text"
+                    app:textInputLayoutFocusedRectEnabled="true"
+                    android:gravity="center_vertical"
+                    android:hint="Search ..."
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="@dimen/padding_10"
+                    android:singleLine="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorWhite_50" />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="14dp"
+                android:background="@color/colorDark"
+                app:tabSelectedTextColor="@color/colorWhite_50"
+                app:tabIndicatorColor="@color/colorWhite_50"
+                app:tabIndicatorHeight="2dp"
+                app:tabTextColor="@color/darkGray"
+                app:tabIndicatorAnimationDuration="@integer/config_navAnimTime"
+                app:layout_constraintTop_toBottomOf="@+id/DataToSearch"
+                android:id="@+id/tabs"
+                app:tabGravity="fill"
+                android:layout_gravity="center"
+                app:tabMode="fixed"
+                android:animateLayoutChanges="true"
+                app:tabIndicatorFullWidth="false">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACCOUNTS"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HASHTAGS"
+                    />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VIDEOS"
+                    />
+
+            </com.google.android.material.tabs.TabLayout>
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarSearchPage"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:id="@+id/message"
+        android:text="No Data Available"
+        android:textColor="@color/Text38"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarSearchPage"
+        android:id="@+id/AccountResultRecyclerView"
+        android:padding="@dimen/padding_10"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarSearchPage"
+        android:id="@+id/HashTagResultRecyclerView"
+        android:padding="@dimen/padding_10"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarSearchPage"
+        android:id="@+id/VideoResultRecyclerView"
+        android:padding="@dimen/padding_10"
+        android:visibility="gone"/>
+
+
+
+
+</RelativeLayout>

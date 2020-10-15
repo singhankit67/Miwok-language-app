@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:state_pressed="true" android:top="4dp">
+        <shape android:shape="oval">
+            <solid android:color="#333333" />
+            <size android:width="20dp" android:height="20dp" />
+        </shape>
+    </item>
+    <item android:bottom="4dp" android:left="4dp" android:right="4dp" android:state_pressed="false" android:top="4dp">
+        <shape android:shape="oval">
+            <solid android:color="#4d4d4d" />
+            <size android:width="20dp" android:height="20dp" />
+        </shape>
+    </item>
+</selector>

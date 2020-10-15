@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fragment_frame"
+    android:layout_height="match_parent"
+    android:background="@color/Dark"
+    tools:context=".SelectMusic">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/music_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin">
+
+                <ImageButton
+                    android:id="@+id/select_music_imagebutton_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Dark"
+                    android:src="@drawable/ic_action_musicback"
+                    app:tint="@color/grayColor" />
+
+                <com.mancj.materialsearchbar.MaterialSearchBar
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:theme="@style/MaterialSearchBarDark"
+                    app:mt_backIconTint="@color/white_transparent"
+                    app:mt_clearIconTint="@color/white_transparent"
+                    app:mt_hint="Search Category"
+                    app:mt_maxSuggestionsCount="0"
+                    app:mt_placeholder="Music Library"
+                    app:mt_placeholderColor="@color/white_transparent"
+                    app:mt_roundedSearchBarEnabled="true"
+                    app:mt_searchBarColor="@color/Dark"
+                    app:mt_searchIconTint="@color/white_transparent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:gravity="center_vertical"
+                    android:text="My music"
+                    android:textColor="@color/white_transparent" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/music_search"
+        android:id="@+id/viewPagerLayout">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:background="@color/colorDark"
+            app:tabGravity="fill"
+            app:tabIndicatorAnimationDuration="@integer/config_navAnimTime"
+            app:tabIndicatorColor="@color/colorWhite_50"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/colorWhite_50"
+            app:tabTextColor="@color/darkGray" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/padding_10"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        android:layout_below="@id/music_search"/>
+
+
+</RelativeLayout>

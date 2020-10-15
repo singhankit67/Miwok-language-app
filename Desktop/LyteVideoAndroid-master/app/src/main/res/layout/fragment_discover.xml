@@ -1,0 +1,142 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/discoverFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark"
+    android:overScrollMode="never">
+
+    <!--Main Explore page-->
+    <RelativeLayout
+        android:id="@+id/MainExplorePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_search_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Search"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:textColor="@color/colorWhite_50"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/search"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/bannerLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="175dp"
+                    android:layout_below="@id/toolbar"
+                    android:background="@color/Dark">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true" />
+
+
+                </RelativeLayout>
+
+                <!--<com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bannerLayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="20dip"
+            app:centered="true"
+            app:fillColor="@color/black"
+            app:pageColor="@color/dimGray"
+
+            app:snap="true" />-->
+<!--                <com.chahinem.pageindicator.PageIndicator-->
+<!--                    android:id="@+id/indicator"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/bannerLayout"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    app:piDefaultColor="@color/darkGray"-->
+<!--                    app:piSelectedColor="@color/colorWhite_50"-->
+<!--                    app:piSize1="6dp"-->
+<!--                    app:piSize2="5dp"-->
+<!--                    app:piSize3="4dp"-->
+<!--                    app:piSize4="3dp"-->
+<!--                    app:piSize5="2dp"-->
+<!--                    app:piSize6="1dp" />-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bannerLayout">
+
+
+                    <TextView
+                        android:id="@+id/textTopCreator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="5dp"
+                        android:text="⭐ Top Creators"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/Text"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dataRecyclerTopCreator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textTopCreator"
+                        android:layout_marginTop="10dp" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dataRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dataRecyclerTopCreator" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:background="@color/colorDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upperLayout"
+        android:layout_centerVertical="true"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:civ_border_color="@color/Secondary"
+            app:civ_border_width="1dp"
+            android:src="@drawable/default_pic"
+            android:id="@+id/user_pic"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/user_pic"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="24dp"
+                android:id="@+id/verificationBadge"
+                android:src="@drawable/ic_verified_badge"
+                android:layout_marginStart="5dp"
+                app:tint="@color/colorPrimary"
+                android:paddingTop="2dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username comment_message_here"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"
+                android:id="@+id/username"
+                android:layout_toRightOf="@id/verificationBadge"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/grayColor"
+                android:layout_marginStart="5dp" />
+
+            <!--<TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"
+                android:layout_marginEnd="15dp"
+                android:layout_below="@id/username"
+                android:inputType="textMultiLine"
+                android:lineHeight="12dp"
+                android:text="@string/comment_message_here"
+                android:textSize="13sp"/>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:id="@+id/l1"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/username"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/timeAgoTv"
+                    android:layout_marginStart="5dp"
+                    android:textSize="10sp"
+                    android:layout_below="@id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Text60"
+                    android:text="@string/_10_mins_ago"/>
+                <TextView
+                    android:id="@+id/number_likes"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:text="10 likes"/>
+
+                <TextView
+                    android:id="@+id/reply"
+                    android:layout_marginStart="12dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:textColor="@color/dimGray"
+                    android:text="Reply"/>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l1"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--<View
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/upperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/line"
+        android:background="@color/dividerColor"/>-->
+
+</RelativeLayout>

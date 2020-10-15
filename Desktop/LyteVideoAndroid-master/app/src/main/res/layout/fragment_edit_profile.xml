@@ -1,0 +1,413 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark"
+    android:clickable="true"
+    tools:context="com.reelvideos.app.profile.ProfileFragment">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:elevation="1dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/closeBtn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/grayColor" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/edit_profile"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textColor="@color/grayColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/saveBtn"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="0dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ic_baseline_check_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/grayColor" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDark"
+        android:layout_marginTop="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:background="@color/colorDark"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/changeCover"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/circle_bg"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    android:visibility="gone"
+                    app:tint="@color/grayColor" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:src="@drawable/default_pic"
+                    app:civ_border_color="@color/colorDark"
+                    app:civ_border_width="3dp" />
+
+                <ImageButton
+                    android:id="@+id/upload_pic_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_bg"
+                    android:padding="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_photo_camera_24"
+                    app:tint="@color/grayColor" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/transparentColor"
+                    android:hint="@string/fullname"
+                    android:textColorHint="@color/Text88"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray"
+                    app:startIconDrawable="@drawable/ic_lyte_person"
+                    app:startIconTint="@color/Text88">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameInputEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/transparentColor"
+                    android:hint="@string/username"
+                    android:textColorHint="@color/darkGray"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray"
+                    app:startIconDrawable="@drawable/ic_rate"
+                    app:startIconTint="@color/Text88">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/usernameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890._"
+                        android:inputType="textFilter"
+                        android:maxLines="1"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp"
+                        app:endIconTint="@color/darkGray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/transparentColor"
+                    android:hint="@string/instagram_id"
+
+                    android:textColorHint="@color/darkGray"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray"
+                    app:prefixTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_carbon_logo_instagram"
+                    app:startIconTint="@color/Text88">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/instaET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp"
+                        app:endIconTint="@color/darkGray" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/transparentColor"
+                    android:hapticFeedbackEnabled="true"
+                    android:hint="@string/region"
+                    android:inputType="none"
+                    android:textColorHint="@color/darkGray"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray"
+                    app:startIconDrawable="@drawable/ic_region"
+                    app:startIconTint="@color/Text88">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/filled_exposed_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparentColor"
+                        android:inputType="none"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/transparentColor"
+                    android:hint="@string/gender"
+                    android:inputType="none"
+                    android:textColorHint="@color/darkGray"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray"
+                    app:startIconDrawable="@drawable/ic_gender"
+                    app:startIconTint="@color/Text88">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/genderDrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Secondary"
+                        android:inputType="none"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/transparentColor"
+                    android:hint="@string/bio"
+                    android:textColorHint="@color/darkGray"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:endIconMode="clear_text"
+
+                    app:endIconTint="@color/darkGray"
+                    app:hintTextColor="@color/dimGray">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bioET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:maxLines="4"
+                        android:textColor="@color/grayColor"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_10"
+                    android:background="@color/dimGray"
+                    android:orientation="vertical"
+                    app:layout_anchorGravity="top|center" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorDark"/>
+
+
+            <!--        END OF INPUT-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

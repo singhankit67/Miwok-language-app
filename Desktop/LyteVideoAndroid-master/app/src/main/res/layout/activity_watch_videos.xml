@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/watchVideoMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clickable="true"
+    android:focusable="true"
+    android:keepScreenOn="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dataRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp">
+
+            <ImageButton
+                android:id="@+id/Goback"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@color/transparentColor"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+            android:id="@+id/progress_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:indeterminate="true"
+            app:spb_color="@color/white_transparent"
+            app:spb_mirror_mode="true"
+            app:spb_reversed="true"
+            app:spb_sections_count="1"
+            app:spb_speed="2"
+            app:spb_stroke_separator_length="@dimen/padding_10" />
+    </RelativeLayout>
+
+</FrameLayout>

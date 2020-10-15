@@ -1,0 +1,277 @@
+<resources>
+    <string name="app_name">Lyte Video</string>
+    <string name="facebook_app_id">241729803766794</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_discover">Discover</string>
+    <string name="nav_notification">Inbox</string>
+    <string name="nav_profile">Profile</string>
+    <string name="originalSoundTx">Original sound - %s</string>
+    <string name="share">Share</string>
+    <string name="downloading">Downloading %s</string>
+    <string name="down_fail">"Download Failed "</string>
+    <string name="please_wait">Please Wait..</string>
+    <string name="terms">By signing up, you confirm to our terms and conditions.</string>
+    <string name="mobile">Phone Number</string>
+    <string name="login_to_lyte_video">Login to Lyte Video</string>
+    <string name="login_continue">OTP will be sent to your number.</string>
+    <string name="loginTxt">Login</string>
+    <string name="login_conti">Please Login to Continue.</string>
+    <string name="permissions">Please allow permissions and retry!</string>
+    <string name="sending">You will shortly receive an OTP.</string>
+    <string name="mob_error">Enter Valid Mobile Number.</string>
+    <string name="otp">OTP</string>
+    <string name="validateOtp">Verify OTP</string>
+    <string name="otp_continue">Enter the OTP sent to your Mobile</string>
+    <string name="error_send_otp">Error Sending OTP</string>
+    <string name="otp_len_error">Invalid OTP Length</string>
+    <string name="validate_otp">Validating OTP..</string>
+    <string name="lets_hop_in">Start Exploring</string>
+    <string name="regis_succ">You have been successfully registered!</string>
+    <string name="login_success">Login Successful!</string>
+    <string name="opt_err">OTP Verification Failed.</string>
+    <string name="back_exit">Hit back again to Exit.</string>
+    <string name="downloaded">Downloaded to %s</string>
+    <string name="leave_a_comment">Leave a comment...</string>
+    <string name="username">Username</string>
+    <string name="comment_message_here">Comment message here...</string>
+    <string name="error_load_cmnt">Error Loading Comments.</string>
+    <string name="fetch_cmnts">Fetching Comments...</string>
+    <string name="comment_count">%s Comments</string>
+    <string name="comments">Comments</string>
+    <string name="_10_mins_ago">10 mins ago</string>
+    <string name="error_msg">Something went Wrong.</string>
+    <string name="process_video">Processing Video %s</string>
+    <string name="post_video">Post Video</string>
+    <string name="cancel">Cancel</string>
+    <string name="download">Download</string>
+    <string name="report">Report</string>
+    <string name="save">Save</string>
+    <string name="describe_your_video">Describe your video</string>
+    <string name="add_hashtags">Add Hashtags</string>
+    <string name="des_abt_video">Add description about this video</string>
+    <string name="suggested_hashtags">Suggested Hashtags</string>
+    <string name="des_small">Description is too Short.</string>
+    <string name="upload_progress">Please wait , while another video is in progress.</string>
+    <string name="videos">Videos</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="_0">0</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="coming_soon">Feature Coming Soon.</string>
+    <string name="no_vids">No Videos!</string>
+    <string name="whoops">Whoops!</string>
+    <string name="settings">Settings</string>
+    <string name="become_our_creator">Become our Creator</string>
+    <string name="change_app_lang">Change App Language</string>
+    <string name="our_policies">Our Policies</string>
+    <string name="terms_conditions">Terms of Services</string>
+    <string name="logout">Logout</string>
+    <string name="copy_policy">Copyright Policy</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="app_ver">V %s</string>
+    <string name="signOutMsg">Do you really want to SignOut?</string>
+    <string name="confirm_txt">Confirm</string>
+    <string name="send_email">Send Email Now</string>
+    <string name="share_msg">Download App now. https://play.google.com/store/apps/details?id=%s</string>
+    <string name="follow">Follow</string>
+    <string name="follow_fail">Follow request Failed.</string>
+    <string name="no_followers_yet">NO FOLLOWERS YET</string>
+    <string name="not_following">NOT FOLLOWING ANYONE YET</string>
+    <string name="no_notifications_yet">No Notifications Yet</string>
+    <string name="explore">Explore</string>
+    <string name="music">#Music</string>
+    <string name="_4587_views">4587 Views</string>
+    <string name="views_txt">%s Views</string>
+    <string name="title_app">India\'s #1 Video App</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="resent_otp">OTP Sent again.</string>
+    <string name="notifications">Notifications</string>
+    <string name="fullname">Fullname</string>
+    <string name="birthday">Birthday</string>
+    <string name="bio">Bio</string>
+    <string name="region">Region</string>
+    <string name="take_pic">Take Photo</string>
+    <string name="choose_gal">Choose from Gallery</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="no_more">No more Videos.</string>
+    <string name="gender">Gender</string>
+    <string name="profile_update">Please wait while we update your profile.</string>
+    <string name="update_success">"Profile Updated Succefully. "</string>
+    <string name="update_fail">Looks like username already taken.</string>
+    <string name="update_fail_img">Image Update Error.</string>
+    <string name="uploading">Uploading Image...</string>
+    <string name="updating_profile">Updating Profile...</string>
+    <string name="video_done">Video Successfully Uploaded!</string>
+    <string name="title_lang">Select Language</string>
+    <string name="Creator_message" formatted="true">Welcome to our creater plan! We are inviting you to join our content creator community. If you want more people to see your work, please join our community. Mail us your work.\n Email: creators@lytevideo.com</string>
+    <string name="Creator_tittle">Become Our Creator</string>
+    <string name="next">Next</string>
+    <string name="preocess_video">Adding filter %s done.</string>
+    <string name="uploading_video">Uploading Video</string>
+    <string name="uploading_video_2">Keep calm while we upload your video..</string>
+    <string name="UPLOAD_CHANNEL">UPLOAD_CHANNEL</string>
+    <string name="progress_video">Please Wait another video is being Uploaded.</string>
+    <string name="extra_options">Options</string>
+    <string name="save_report_msg">If you like it, SAVE IT!\nIf you want it offline, DOWNLOAD IT!\nIf find it inappropriate, REPORT IT!</string>
+    <string name="report_success">Content reported successfully.</string>
+    <string name="confirm_delete">Delete</string>
+    <string name="delete_msg">Are you sure to delete the video?</string>
+    <string name="delete_success">Video deleted Successfully!</string>
+    <string name="login_first" translatable="false">You need to Login First.</string>
+    <string name="exit_msg" translatable="false">Hit back again to exit.</string>
+    <string name="instagram_id">Instagram ID</string>
+    <string name="idsymbol">\@</string>
+    <string name="creatorid">creatorId</string>
+    <string name="selectmusic_select">Select</string>
+
+    <string name="rate_very_slow">0.3X</string>
+    <string name="rate_slow">0.5X</string>
+    <string name="rate_standard">1X</string>
+    <string name="rate_fast">2X</string>
+    <string name="rate_very_fast">3X</string>
+
+    <string-array name="preview_render_preference">
+        <item>FIT</item>
+        <item>CROP</item>
+    </string-array>
+
+    <string-array name="preview_render_value_preference">
+        <item>"FIT"</item>
+        <item>"CROP"</item>
+    </string-array>
+
+    <string-array name="preview_resolution">
+        <item>1080P</item>
+        <item>720P</item>
+    </string-array>
+
+    <string-array name="record_resolution">
+        <item>1080P</item>
+        <item>720P</item>
+        <item>540P</item>
+        <item>480P</item>
+        <item>360P</item>
+    </string-array>
+
+    <string-array name="frame_rate">
+        <item>30</item>
+        <item>25</item>
+        <item>24</item>
+        <item>20</item>
+        <item>15</item>
+    </string-array>
+
+    <string-array name="channels">
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="sample_rate">
+        <item>48000</item>
+        <item>44100</item>
+        <item>22050</item>
+    </string-array>
+
+    <string name="filter">filter</string>
+    <string name="gif">gif</string>
+    <string name="subtitle">subtitle</string>
+    <string name="mv">MV</string>
+    <string name="sound">sound</string>
+    <string name="effect">effect</string>
+    <string name="speed_time">speed_time</string>
+    <string name="transition">transition</string>
+    <string name="paint">paint</string>
+    <string name="cover">cover</string>
+    <string name="smoother">smoother</string>
+    <string name="effect_tip">Press and hold to use effect</string>
+    <string name="undo">undo</string>
+    <string name="split_screen">split_screen</string>
+    <string name="dream">dream</string>
+    <string name="dynamic">dynamic</string>
+
+    <string name="caption_effect_font_category_name">Plain text</string>
+    <string name="caption_effect_bottom_keyboard">keyboard</string>
+    <string name="caption_effect_bottom_color">colour</string>
+    <string name="caption_effect_bottom_font">Font</string>
+    <string name="caption_effect_bottom_animation">Special effects</string>
+    <string name="text_count_outof">Word count exceeds limit</string>
+    <string name="subtitle_text_color">filling</string>
+    <string name="subtitle_text_stroke">Stroke</string>
+    <string name="verification_badge">Verification Badge</string>
+    <string name="comment_here">Comment Here</string>
+    <string name="em_haha">😂</string>
+    <string name="em_heart">❤</string>
+    <string name="em_love">😍</string>
+    <string name="em_ok">👌</string>
+    <string name="em_fire">🔥</string>
+    <string name="em_nosee">🙈</string>
+    <string name="em_rocking">🤟</string>
+    <string name="em_clap">👏</string>
+    <string name="empty_comment_msg">Be the first to Comment.</string>
+    <string name="em_gift">🎁</string>
+    <string name="comment_button">Comment Button</string>
+    <string name="skip_txt">Skip</string>
+    <string name="comment_failed">Comment failed to be added.</string>
+    <string name="comment_posted">Comment Posted!</string>
+    <string name="explore_now">Explore Now</string>
+
+    <string name="id">id</string>
+    <string name="user">user</string>
+    <string name="uname">username</string>
+    <string name="text">text</string>
+    <string name="num_likes">num_likes</string>
+    <string name="is_liked">is_liked</string>
+    <string name="user_pic">user_pic</string>
+    <string name="time_ago">time_ago</string>
+    <string name="results">results</string>
+    <string name="comments_count">comments_count</string>
+    <string name="video_id">video_id</string>
+    <string name="save_video">saveVideo</string>
+
+    <string name="video_saved">Video Saved</string>
+    <string name="video_reported">Video Reported</string>
+    <string name="download_success">Successfully Downloaded</string>
+    <string name="creator">creator</string>
+    <string name="creator_pic">creator_pic</string>
+    <string name="downloads">downloads</string>
+    <string name="shares">shares</string>
+    <string name="num_comments">num_comments</string>
+    <string name="creator_username">creator_username</string>
+    <string name="description">description</string>
+    <string name="file">file</string>
+    <string name="poster">poster</string>
+    <string name="hashtags">hashtags</string>
+    <string name="is_following">is_following</string>
+    <string name="creator_is_verified">creator_is_verified</string>
+    <string name="num_followers">num_followers</string>
+    <string name="num_following">num_following</string>
+    <string name="num_videos">num_videos</string>
+    <string name="insta_username">instagram_username</string>
+    <string name="is_verified">is_verified</string>
+    <string name="fname">fullname</string>
+    <string name="pic">pic</string>
+    <string name="copyright_policy_link">https://lytevideo.com/copyright-policy</string>
+    <string name="privacy_policy_link">https://lytevideo.com/privacy-policy</string>
+    <string name="terms_and_condition_link">https://lytevideo.com/terms-and-conditions</string>
+    <string name="no_email_clients">There are no email clients installed.</string>
+    <string name="send_emaill">Send Email</string>
+    <string name="num_views">num_views</string>
+    <string name="count">count</string>
+    <string name="bioo">bio</string>
+    <string name="suggested_hashtag">Suggested HashTag</string>
+    <string name="ID">ID</string>
+    <string name="NAME">NAME</string>
+    <string name="IMG">IMG</string>
+    <string name="isFollowed">isFollowed</string>
+    <string name="newFollowing">newFollowing</string>
+    <string name="upload_start">Upload Started!</string>
+    <string name="DISCOVER">DISCOVER</string>
+    <string name="FAVOURITE">FAVOURITE</string>
+    <string name="My_Music">My Music</string>
+    <string name="permission_denied">Permission Denied, You cannot upload or create video.</string>
+    <string name="both_permission_msg">You need to allow access to both the permissions</string>
+    <string name="sending_otp">Sending OTP Please Wait</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+</resources>

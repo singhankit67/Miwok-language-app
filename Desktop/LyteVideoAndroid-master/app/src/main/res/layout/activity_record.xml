@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.trinity.camera.TrinityPreviewView
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.reelvideos.app.recorder.view.foucs.MarkerLayout
+            android:id="@+id/mark_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/record_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/record_button">
+
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintRight_toRightOf="parent"
+                app:tint="@color/Text" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter"
+                android:layout_marginTop="0dp"
+                android:elevation="@dimen/dp5"
+                android:gravity="center"
+                android:text="Filters"
+                android:textColor="@color/Text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/record_button"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/capture"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/recording_button"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/a18"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/duration_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/dp30"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/record_button"
+            app:layout_constraintStart_toStartOf="@id/record_button"
+            app:layout_constraintTop_toBottomOf="@id/record_button">
+
+            <TextView
+                android:id="@+id/fifteen"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:padding="2dp"
+                android:text="15s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thirty"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_toRightOf="@id/fifteen"
+                android:padding="2dp"
+                android:text="30s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sixty"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_toRightOf="@id/thirty"
+                android:padding="2dp"
+
+                android:text="60s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.reelvideos.app.recorder.view.LineProgressView
+            android:id="@+id/line_view"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pv_divider_width="1dp"
+            app:pv_radius="4dp" />
+
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@mipmap/ic_setting"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/controlLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setting">
+
+            <ImageView
+                android:id="@+id/switch_camera"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="31dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/refresh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch_camera"
+                android:layout_alignStart="@+id/switch_camera"
+                android:layout_alignEnd="@+id/switch_camera"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:text="Flip"
+                android:textColor="@color/Text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/show_rate_bar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/switch_camera"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/speed"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_camera"
+                app:tint="@color/Text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_rate_bar"
+                android:layout_alignStart="@+id/show_rate_bar"
+                android:layout_alignEnd="@+id/show_rate_bar"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:text="Speed"
+                android:textColor="@color/Text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/timer"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/show_rate_bar"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ic_baseline_timer_24"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_camera" />
+
+            <ImageView
+                android:id="@+id/flash"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/timer"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/flash_off"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/switch_camera"
+                app:tint="@color/Text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flash"
+                android:layout_alignStart="@+id/flash"
+                android:layout_alignEnd="@+id/flash"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="-20dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:text="Flash"
+                android:textColor="@color/Text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/beauty"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/ic_beauty"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/effect"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/beauty"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/ic_effect"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/beauty" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/record_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_button">
+
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="24dp"
+                android:src="@mipmap/ic_delete" />
+
+            <ImageView
+                android:id="@+id/done"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="16dp"
+                android:layout_toRightOf="@id/delete"
+                android:src="@drawable/bg_record_done" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/record_button"
+            app:layout_constraintTop_toTopOf="@id/record_button">
+
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/gallery" />
+
+            <TextView
+                android:id="@+id/gallery_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/photo"
+                android:layout_marginTop="0dp"
+                android:elevation="@dimen/dp5"
+                android:gravity="center"
+                android:text="Gallery"
+                android:textColor="@color/Text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/musicLayout" />
+
+
+        <ImageView
+            android:id="@+id/effectBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@mipmap/ic_effect"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/record_button"
+            app:layout_constraintEnd_toStartOf="@+id/record_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record_button" />
+
+        <RelativeLayout
+            android:id="@+id/musicLayout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/ic_baseline_music_note_24"-->
+            <!--                android:id="@+id/musiclogo"/>-->
+            <TextView
+                android:id="@+id/music"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/music_double"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Add Music"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rate_bar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_rate_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/record_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <RadioButton
+                android:id="@+id/rate_quarter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.98"
+                android:background="@drawable/record_rate_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="slower"
+                android:textColor="@color/rate_text"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rate_half"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/record_rate_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="slow"
+                android:textColor="@color/rate_text"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rate_origin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/record_rate_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Normal"
+                android:textColor="@color/rate_text"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rate_double"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/record_rate_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Fast"
+                android:textColor="@color/rate_text"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rate_double_power2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.98"
+                android:background="@drawable/record_rate_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Faster"
+                android:textColor="@color/rate_text"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

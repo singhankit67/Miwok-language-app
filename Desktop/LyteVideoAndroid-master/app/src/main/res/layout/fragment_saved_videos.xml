@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorDark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dataRecycler"
+            android:scrollingCache="true"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/no_data_layout"
+            android:paddingTop="50dp"
+            android:background="@color/colorDark">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/whoops"
+                android:id="@+id/whoops"
+                android:textColor="@color/dimGray"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/whoops"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginLeft="55dp"
+                android:textColor="@color/dimGray"
+                android:layout_marginRight="55dp"
+                android:text="@string/no_vids"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:lottie_rawRes="@raw/progressloader"
+            app:lottie_colorFilter="#fff"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            android:layout_centerInParent="true"
+            app:lottie_speed="1"
+            android:id="@+id/loaderanimationforsavedvideos"
+            android:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/DarkLight">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/loaderanimationformusicdiscover"
+            app:lottie_rawRes="@raw/progressloader"
+            app:lottie_autoPlay="true"
+            app:lottie_speed="1"
+            app:lottie_colorFilter="#fff"
+            app:lottie_loop="true"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/DiscoverMusicRecycler"
+            android:scrollingCache="true"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:text="@string/whoops"
+            android:id="@+id/whoops"
+            android:textColor="@color/dimGray"
+            android:textSize="22sp"/>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

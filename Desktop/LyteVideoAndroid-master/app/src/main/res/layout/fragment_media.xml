@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_close"
+        android:padding="@dimen/dp10"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        app:tint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/done"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_done"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:padding="@dimen/dp10"
+        android:layout_marginRight="0dp"
+        app:tint="@color/colorAccent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        android:layout_below="@id/close"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_layout"/>
+
+</RelativeLayout>
